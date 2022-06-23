@@ -10,8 +10,9 @@ public class BaseController implements ErrorController {
 //ErrorController 에러 컨트롤을 커스텀 하겠다~
 
     @GetMapping("/")
-    public String root(){
-        return "index";
+    public String root() throws Exception{
+        throw new Exception("테스트");
+        //return "index";
     }
 
     @RequestMapping("/error")
